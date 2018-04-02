@@ -58,8 +58,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter.cs" />
     <Compile Include="AdapterTester.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="IAdaptee.cs" />
     <Compile Include="ITarget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

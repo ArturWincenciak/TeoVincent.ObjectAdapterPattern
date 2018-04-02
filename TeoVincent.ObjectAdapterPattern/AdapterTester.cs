@@ -29,7 +29,7 @@ namespace TeoVincent.ObjectAdapterPattern
         public void call_specific_request_method_in_adaptee()
         {
             // arrange
-            IAdaptee adaptee = A.Fake();
+            IAdaptee adaptee = A.Fake<IAdaptee>();
             ITarget adapter = new Adapter(adaptee);
  
             // act
