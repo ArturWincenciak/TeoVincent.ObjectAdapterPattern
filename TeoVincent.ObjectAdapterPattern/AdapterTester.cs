@@ -24,5 +24,19 @@ namespace TeoVincent.ObjectAdapterPattern
             // assert
             A.CallTo(() => target.Request()).MustHaveHappened();
         }
+
+        [Fact]
+        public void call_specific_request_method_in_adaptee()
+        {
+            // arrange
+            IAdaptee adaptee = A.Fake();
+            ITarget adapter = new Adapter(adaptee);
+ 
+            // act
+            client.CallRequest(adapter);
+ 
+            // assert
+            A.CallTo(() => adaptee.SpecificRequest()).MustHaveHappened();
+        }
     }
 }
